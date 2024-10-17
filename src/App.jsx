@@ -1,8 +1,6 @@
-/*eslint-disable */
-// App.jsx
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
+import Header from './components/Header'; 
 
 const ProductList = lazy(() => import('./components/ProductList'));
 const ProductDetail = lazy(() => import('./components/ProductDetail'));
@@ -18,7 +16,7 @@ function App() {
           <Route path="/" element={<ProductList />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<NotFound />} /> 
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </Router>
